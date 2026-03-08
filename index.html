@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DFF CORP — Company Profile</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+
+     <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+
+    <!-- NAV Brand / Logo -->
+    <a class="navbar-brand" href="#hero">DFF<span>CORP</span></a>
+
+    <!-- NAV Hamburger mobile -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV Menu links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+
+        <!-- NAV DROPDOWN Bootstrap -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tim</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#team">Pendiri</a></li>
+            <li><a class="dropdown-item" href="#team">Desainer</a></li>
+            <li><a class="dropdown-item" href="#team">Pengembang</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#pricing">Harga</a></li>
+        <li class="nav-item"><a class="nav-link" href="#showreel">Video</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Header/Hero -->
+<section id="hero">
+  <div class="container py-5">
+    <div class="row align-items-center gap-7">
+
+      <!-- Teks kiri -->
+      <div class="col-lg-7">
+        <h1 class="" style="font-size: 20px;">Jakarta · Est. 2026</h1>
+        <h1>
+        <span>Kami Merancang Pengalaman Digital</span>
+        <span class="text-blue-light">yang Tak Terlupakan</span>
+        </h1>  
+        <p class="lead" style="color: white;">
+          Studio kreatif & teknologi yang membantu brand tumbuh melalui desain
+          yang elegan dan rekayasa perangkat lunak yang tangguh.
+        </p>
+
+        <!-- 🔷 BUTTON + HYPERLINK -->
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#services" class="btn-hero-primary">Lihat Layanan</a>
+          <a  href="#contact" class="btn-hero-outline">Hubungi Kami</a>
+
+        </div>
+      </div>
+    
+      <!-- Kartu statistik kanan — POSISI ITEM dengan Bootstrap grid -->
+      <div class="col-lg-5">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="hero-card">
+              <div class="hero-card-num">120+</div>
+              <div class="hero-card-label">Proyek Selesai</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="hero-card">
+              <div class="hero-card-num">98%</div>
+              <div class="hero-card-label">Klien Puas</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="hero-card">
+              <div class="hero-card-num">7+</div>
+              <div class="hero-card-label">Tahun Pengalaman</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="hero-card">
+              <div class="hero-card-num">18</div>
+              <div class="hero-card-label">Anggota Tim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     🔷 ABOUT — Image, Bold, Blockquote,
+               Perataan teks, Warna teks variatif
+============================================ -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- 🔷 IMAGE + badge (posisi absolut) -->
+      <div class="col-lg-5">
+        <div class="position-relative">
+          <img
+            class="about-img"
+            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80"
+            alt="Tim DFF CORP bekerja"
+          />
+          <!-- POSISI item di atas gambar -->
+          <div class="about-badge-box position-absolute bottom-0 end-0" style="margin:-18px;">
+            <div class="num">7+</div>
+            <small>Tahun<br/>Berpengalaman</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teks -->
+      <div class="col-lg-7">
+        <p class="section-label">Tentang Kami</p>
+        <h2 class="section-title">Studio yang <em>Percaya</em> pada Detail</h2>
+        <div class="divider-blue"></div>
+
+        <!-- 🔷 Perataan teks: justify -->
+        <p class="text-justify" style="color:var(--gray-text); margin-bottom:16px;">
+          DFF CORP adalah perusahaan desain & teknologi berdiri di Jakarta sejak 2018.
+          Kami bekerja bersama klien dari berbagai industri untuk menciptakan produk digital
+          yang <strong>fungsional sekaligus estetik</strong> — karena kami percaya bahwa
+          <strong>kualitas ada pada setiap detail</strong>.
+        </p>
+
+        <!-- 🔷 Warna teks variatif -->
+        <p class="mb-3">
+          <span class="text-blue-light fw-semibold">Desain adalah bahasa kami.</span>
+          <span class="text-blue-mid fw-semibold"> Teknologi adalah alat kami.</span>
+          <span class="text-blue-deep fw-semibold"> Inovasi adalah semangat kami.</span>
+        </p>
+
+        <!-- (blockquote) -->
+        <blockquote div class="font-size">
+          "Desain yang baik bukan sekadar indah — ia adalah solusi elegan untuk masalah yang nyata."
+          <cite>— Muhammad Daffa Aulia Syahrul, Founder DFF CORP</cite>
+        </blockquote>
+
+        <!-- sudirman, jakarta-->
+        <p class="text-justify text-gray" style="font-size:0.85rem;">
+          📍 Sudirman, Jakarta &nbsp;·&nbsp;
+
+          <!-- link ke email -->
+          <a href="mailto:daffaaulia254@gmail.com" class="text-blue-light">daffaaulia254@gmail.com</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- List -->
+<section id="services">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label">Yang Kami Tawarkan</p>
+      <h2 class="section-title">Layanan <em>Unggulan</em></h2>
+      <div class="divider-blue mx-auto"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Kartu 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-palette2"></i></div>
+          <h5>UI/UX Design</h5>
+          <p class="text-gray" style="font-size:0.88rem;">Antarmuka intuitif & pengalaman pengguna yang menyenangkan.</p>
+          <!-- 🔷 UNORDERED LIST (daftar tidak berurut) -->
+          <ul class="list-check">
+            <li>Riset & User Persona</li>
+            <li>Wireframe & Prototype</li>
+            <li>Design System</li>
+            <li>Usability Testing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kartu 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+          <h5>Web Development</h5>
+          <p class="text-gray" style="font-size:0.88rem;">Website cepat, aman, dan skalabel untuk bisnis Anda.</p>
+          <!-- 🔷 ORDERED LIST (daftar berurut) -->
+          <ol class="list-number">
+            <li>Konsultasi & Perencanaan</li>
+            <li>Desain & Prototyping</li>
+            <li>Development FE & BE</li>
+            <li>QA & Deployment</li>
+            <li>Maintenance Support</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Kartu 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-phone"></i></div>
+          <h5>Mobile App</h5>
+          <p class="text-gray" style="font-size:0.88rem;">Aplikasi iOS & Android yang performatif.</p>
+          <ul class="list-check">
+            <li>React Native & Flutter</li>
+            <li>App Store Optimization</li>
+            <li>Push Notification</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kartu 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-bar-chart-line"></i></div>
+          <h5>Branding & Strategi</h5>
+          <p class="text-gray" style="font-size:0.88rem;">Identitas brand yang kuat dan konsisten.</p>
+          <ul class="list-check">
+            <li>Logo & Visual Identity</li>
+            <li>Brand Guidelines</li>
+            <li>Content Strategy</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- foto team section -->
+<section id="team">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label" style="color:rgba(255,255,255,0.5);">Orang-orang Hebat</p>
+      <h2 class="section-title">Tim Kami</em></h2>
+      <div class="divider-blue mx-auto"></div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+
+          <!--— foto tim -->
+          <img src="Asset/foto daffa malem2 pake jaket kulit di mercu.jpg" alt="Muhammd Daffa"/>
+          <h5>Muhammad Daffa Aulia Syahrul</h5>
+          <span>Founder & CEO</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <img src="Asset/Daffa bali.jpeg" alt="Daffa"/>
+          <h5>Muhammad Daffa Aulia Syahrul</h5>
+          <span>Lead Designer</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <img src="Asset/daffa.jpg" alt="Muhammad Daffa Aulia Syahrul"/>
+          <h5>Muhammad Daffa Aulia Syahrul</h5>
+          <span>Lead Developer</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card">
+          <img src="Asset/daffa nikahan kaka ridha.jpeg" alt="Muhammad Daffa Aulia Syahrul"/>
+          <h5>Muhammad Daffa Aulia Syahrul</h5>
+          <span>Project Manager</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Tabel Harga -->
+<section id="pricing">
+  <div class="container">
+    <p class="section-label">Investasi Terbaik</p>
+    <h2 class="section-title">Paket <em>Harga</em></h2>
+    <div class="divider-blue"></div>
+
+    <div class="table-responsive">
+      <table class="table table-custom table-hover align-middle">
+        <thead>
+          <tr>
+            <th>Paket</th>
+            <th>Layanan</th>
+            <th>Durasi</th>
+            <th>Harga (IDR)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Starter</strong></td>
+            <td>Landing Page + UI Kit</td>
+            <td>2 Minggu</td>
+            <td class="text-blue-light fw-bold">5.000.000</td>
+            <td><span class="badge" style="background:var(--blue-pale);color:var(--blue-mid);">Tersedia</span></td>
+          </tr>
+          <tr>
+            <td><strong>Growth</strong></td>
+            <td>Website Multi-halaman + CMS</td>
+            <td>4 Minggu</td>
+            <td class="text-blue-light fw-bold">15.000.000</td>
+            <td><span class="badge bg-warning text-dark">Terbatas</span></td>
+          </tr>
+          <tr>
+            <td><strong>Enterprise</strong></td>
+            <td>Web + Mobile App + Branding</td>
+            <td>12 Minggu</td>
+            <td class="text-blue-light fw-bold">50.000.000+</td>
+            <td><span class="badge" style="background:var(--blue-pale);color:var(--blue-mid);">Tersedia</span></td>
+          </tr>
+          <tr>
+            <td><strong>Maintenance</strong></td>
+            <td>Update Bulanan + Support</td>
+            <td>Bulanan</td>
+            <td class="text-blue-light fw-bold">2.000.000/bln</td>
+            <td><span class="badge bg-danger">Penuh</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-center text-gray mt-3" style="font-size:0.85rem;">
+      * Harga dapat disesuaikan dengan kebutuhan.
+      <a href="#contact" class="text-blue-light">Konsultasi gratis</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- video -->
+<section id="showreel">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-label" style="color:rgba(255,255,255,.5);">Lihat Karya Kami</p>
+      <h2 class="section-title">Company <em style="color:var(--blue-light)">Showreel</em></h2>
+      <div class="divider-blue mx-auto"></div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <!-- 🔷 VIDEO TAG -->
+        <div class="video-frame">
+          <video controls
+            poster="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+            Browser Anda tidak mendukung tag video.
+          </video>
+        </div>
+        <p class="text-center mt-3" style="color:rgba(255,255,255,0.4); font-size:0.82rem;">
+          Ganti dengan video showreel asli perusahaan Anda.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     🔷 FORMULIR KONTAK
+     Elemen: text, email, date, url, select,
+     textarea, radio button, checkbox, button
+============================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Info Kontak -->
+      <div class="col-lg-4">
+        <div class="contact-info-box">
+          <p class="section-label">Hubungi Kami</p>
+          <h2 class="section-title">Mari <em style="color:var(--blue-light)">Berkolaborasi</em></h2>
+          <div class="divider-blue"></div>
+          <p style="color:rgba(255,255,255,0.65); font-size:0.9rem; margin-bottom:28px;">
+            Tim kami akan merespons dalam 1×24 jam kerja.
+          </p>
+
+          <div class="contact-detail">
+            <div class="ci-icon"><i class="bi bi-geo-alt"></i></div>
+            <p>Jl. Sudirman No. 88,<br/>Jakarta Pusat 10220</p>
+          </div>
+          <div class="contact-detail">
+            <div class="ci-icon"><i class="bi bi-telephone"></i></div>
+            <p>+62 21 5555 7890</p>
+          </div>
+          <div class="contact-detail">
+            <div class="ci-icon"><i class="bi bi-envelope"></i></div>
+            <!-- 🔷 HYPERLINK email -->
+            <p><a href="mailto:daffaaulia254@gmail.com">@DFFCORP.id</a></p>
+          </div>
+          <div class="contact-detail">
+            <div class="ci-icon"><i class="bi bi-globe"></i></div>
+            <!-- 🔷 HYPERLINK website -->
+            <p><a href="mailto:daffaaulia254@gmail.com" target="_blank">WWW.DFFCORP.COM</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulir -->
+      <div class="col-lg-8">
+        <div class="form-box">
+          <form action="#" method="post">
+
+            <!-- Input teks + email -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label" for="nama">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama"
+                       placeholder="" required/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">Alamat Email</label>
+                <input type="email" class="form-control" id="email"
+                       placeholder="" required/>
+              </div>
+            </div>
+
+            <!-- 🔷 Kolom tanggal + URL -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label" for="tanggal">Tanggal Meeting</label>
+                <input type="date" class="form-control" id="tanggal"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="website">Website Anda</label>
+                <input type="url" class="form-control" id="website"
+                       placeholder=""/>
+              </div>
+            </div>
+
+            <!-- 🔷 Select / Dropdown -->
+            <div class="mb-3">
+              <label class="form-label" for="layanan">Layanan yang Diminati</label>
+              <select class="form-select" id="layanan">
+                <option value="">— Pilih Layanan —</option>
+                <option>UI/UX Design</option>
+                <option>Web Development</option>
+                <option>Mobile App</option>
+                <option>Branding & Strategi</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+
+            <!-- 🔷 RADIO BUTTON — estimasi anggaran -->
+            <div class="mb-3">
+              <label class="form-label d-block">Estimasi Anggaran</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="budget" id="b1" value="5jt"/>
+                  <label class="form-check-label" for="b1">Di bawah Rp 5 Juta</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="budget" id="b2" value="15jt"/>
+                  <label class="form-check-label" for="b2">Rp 5 – 15 Juta</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="budget" id="b3" value="50jt"/>
+                  <label class="form-check-label" for="b3">Rp 15 – 50 Juta</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="budget" id="b4" value="50jt+"/>
+                  <label class="form-check-label" for="b4">Di atas Rp 50 Juta</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Textarea pesan -->
+            <div class="mb-3">
+              <label class="form-label" for="pesan">Ceritakan Proyek Anda</label>
+              <textarea class="form-control" id="pesan" rows="4"
+                        placeholder="Halo DFF CORP, saya ingin..."></textarea>
+            </div>
+
+            <!-- CHECKBOX -->
+            <div class="mb-4">
+              <label class="form-label d-block">Saya Tertarik Dengan</label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="c1" name="interest" value="konsultasi"/>
+                <label class="form-check-label" for="c1">Sesi Konsultasi Gratis</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="c2" name="interest" value="proposal"/>
+                <label class="form-check-label" for="c2">Menerima Proposal Proyek</label>
+              </div>
+           
+
+            <!-- BUTTON -->
+            <div class="d-flex gap-3 flex-wrap">
+              <button type="submit" class="btn-blue">
+                <i class="bi bi-send me-2"></i>Kirim Pesan
+              </button>
+              <button type="reset" class="btn btn-outline-secondary btn-sm px-4">
+                Reset
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     🔷 FOOTER
+============================================ -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand">DFF<span>CORP</span></div>
+        <p style="font-size:0.88rem; max-width:280px;">
+          Studio kreatif & teknologi yang membantu brand tumbuh melalui desain elegan
+          dan rekayasa perangkat lunak yang tangguh.
+        </p>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h6>Layanan</h6>
+        <ul class="footer-links">
+          <li><a href="#services">UI/UX Design</a></li>
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">Mobile App</a></li>
+          <li><a href="#services">Branding</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Perusahaan</h6>
+        <ul class="footer-links">
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#team">Tim</a></li>
+          <li><a href="#pricing">Harga</a></li>
+          <li><a href="#">Karir</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Ikuti Kami</h6>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/daffs_26/">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/muhammad-daffa-aulia-syahrul-241410263">LinkedIn</a></li>
+          <li><a href="https://github.com/daffs26">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider"/>
+
+    <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
+      <p>© 2026 DFF CORP. Hak cipta dilindungi.</p>
+      <p>
+        <a href="#" style="color:rgba(255,255,255,.45); text-decoration:none; font-size:0.8rem;">Kebijakan Privasi</a>
+        &nbsp;·&nbsp;
+        <a href="#" style="color:rgba(255,255,255,.45); text-decoration:none; font-size:0.8rem;">Syarat & Ketentuan</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle (termasuk Popper untuk dropdown) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
