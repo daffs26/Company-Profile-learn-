@@ -1,22 +1,26 @@
 /* ================================================
    CSS VARIABLES — warna & font global
+   📝 Ubah nilai warna di sini untuk mengganti
+      tema warna seluruh website sekaligus
 ================================================ */
 :root {
-  --blue-deep:   #0A2540;   /* biru tua utama */
-  --blue-mid:    #1A4A8A;   /* biru medium */
-  --blue-light:  #2D7DD2;   /* biru terang / aksen */
-  --blue-pale:   #EBF3FD;   /* biru sangat muda / background */
-  --white:       #FFFFFF;
-  --gray-soft:   #F7F9FC;
-  --gray-text:   #6B7C99;
-  --dark-text:   #0A2540;
+  --blue-deep:   #0A2540;   /* biru tua — warna utama navbar, footer, heading */
+  --blue-mid:    #1A4A8A;   /* biru sedang — dipakai di gradient hero */
+  --blue-light:  #2D7DD2;   /* biru terang — warna aksen, button, garis */
+  --blue-pale:   #EBF3FD;   /* biru sangat muda — background section & hover */
+  --white:       #FFFFFF;   /* putih murni */
+  --gray-soft:   #F7F9FC;   /* abu sangat muda — background section selang-seling */
+  --gray-text:   #6B7C99;   /* abu-biru — warna teks deskripsi / sub-teks */
+  --dark-text:   #0A2540;   /* warna teks utama (sama dengan blue-deep) */
 
-  --ff-display: 'Poppins', serif;
-  --ff-body:    'Poppins', sans-serif;
+  --ff-display: 'Poppins', sans-serif;  /* font untuk judul */
+  --ff-body:    'Poppins', sans-serif;  /* font untuk isi teks */
 }
 
 /* ================================================
-   BASE
+   BASE — Pengaturan dasar seluruh halaman
+   📝 font-size: 16px adalah ukuran dasar.
+      Semua rem/em dihitung dari sini.
 ================================================ */
 body {
   font-family: var(--ff-body);
@@ -24,23 +28,24 @@ body {
   background: var(--white);
   font-size: 16px;
   scroll-behavior: smooth;
-  font-family: poppins, sans-serif;
 }
-h1, h2, h3, h4 { font-family: poppins, sans-serif; }
+h1, h2, h3, h4 { font-family: var(--ff-display); }
 a { transition: color .2s; }
+
+/* 📝 Jarak atas-bawah tiap section (desktop) */
 section { padding: 90px 0; }
 
+
 /* ================================================
-   🔷 NAVBAR — Bootstrap navbar dikustom
+   🔷 NAVBAR
+   📝 Navbar sticky menempel di atas saat scroll
 ================================================ */
 .navbar {
   background: var(--blue-deep) !important;
-  padding: 0 0;
+  padding: 0;
   box-shadow: 0 2px 20px rgba(10,37,64,0.25);
-  font-family: poppins, sans-serif;
 }
 .navbar-brand {
-  font-family: poppins, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff !important;
@@ -56,31 +61,29 @@ section { padding: 90px 0; }
   text-transform: uppercase;
   padding: 22px 16px !important;
   transition: color .2s;
-  font-family: poppins, sans-serif;
 }
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active { color: #fff !important; }
-
-/* Dropdown kustom */
 .dropdown-menu {
   border: none;
   border-top: 3px solid var(--blue-light);
   border-radius: 0 0 6px 6px;
   box-shadow: 0 8px 32px rgba(10,37,64,0.12);
   padding: 8px 0;
-  font-family: poppins, sans-serif;
 }
 .dropdown-item {
   font-size: 0.85rem;
   color: var(--blue-deep);
   padding: 10px 22px;
 }
-.dropdown-item:hover { background: var(--blue-pale); color: var(--blue-light); font-family: poppins, sans-serif; }
+.dropdown-item:hover { background: var(--blue-pale); color: var(--blue-light); }
 .navbar-toggler { border-color: rgba(255,255,255,0.3); }
 .navbar-toggler-icon { filter: invert(1); }
 
+
 /* ================================================
    🔷 HERO / HEADER
+   📝 min-height: 100vh = tinggi minimal = tinggi layar penuh
 ================================================ */
 #hero {
   background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 60%, #37383a 100%);
@@ -89,7 +92,6 @@ section { padding: 90px 0; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  font-family: poppins, sans-serif;
 }
 #hero::before {
   content: '';
@@ -104,13 +106,13 @@ section { padding: 90px 0; }
   color: var(--blue-light);
   margin-bottom: 14px;
 }
+/* 📝 clamp(min, preferred, max) = ukuran font responsif otomatis */
 #hero h1 {
   font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 700;
   color: #fff;
   line-height: 1.1;
   margin-bottom: 24px;
-  font-family: poppins, sans-serif;
 }
 #hero h1 em { color: var(--blue-light); font-style: italic; }
 #hero p.lead {
@@ -119,7 +121,6 @@ section { padding: 90px 0; }
   max-width: 520px;
   margin-bottom: 40px;
   font-weight: 300;
-  font-family: poppins, sans-serif;
 }
 .hero-card {
   background: rgba(255,255,255,0.07);
@@ -129,26 +130,21 @@ section { padding: 90px 0; }
   backdrop-filter: blur(8px);
   text-align: center;
   color: #fff;
-  font-family: poppins, sans-serif;
 }
 .hero-card-num {
-  font-family: var(--ff-display);
   font-size: 2.6rem;
   font-weight: 700;
   color: var(--blue-light);
   line-height: 1;
-  font-family: poppins, sans-serif;
 }
 .hero-card-label {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.6);
   margin-top: 6px;
-  font-family: poppins, sans-serif;
 }
 
-/* ================================================
-   BUTTONS kustom
-================================================ */
+
+/* button di section hero */
 .btn-hero-primary {
   background: var(--blue-light);
   color: #fff;
@@ -162,13 +158,11 @@ section { padding: 90px 0; }
   transition: background .25s, transform .2s;
   text-decoration: none;
   display: inline-block;
-  font-family: poppins, sans-serif;
 }
 .btn-hero-primary:hover {
   background: #1a6abf;
   color: #fff;
   transform: translateY(-2px);
-  font-family: poppins, sans-serif;
 }
 .btn-hero-outline {
   background: transparent;
@@ -183,13 +177,11 @@ section { padding: 90px 0; }
   transition: all .25s;
   text-decoration: none;
   display: inline-block;
-  font-family: poppins, sans-serif;
 }
 .btn-hero-outline:hover {
   background: rgba(255,255,255,0.1);
   color: #fff;
   border-color: #fff;
-  font-family: poppins, sans-serif;
 }
 .btn-blue {
   background: var(--blue-deep);
@@ -202,40 +194,39 @@ section { padding: 90px 0; }
   letter-spacing: .5px;
   transition: background .2s;
   cursor: pointer;
-  font-family: poppins, sans-serif;
 }
 .btn-blue:hover { background: var(--blue-mid); color: #fff; }
 
-/* ================================================
-   🔷 ABOUT SECTION
-================================================ */
+
+/* About Section */
 #about { background: var(--white); }
 
+/* Tentang kami */
 .section-label {
   font-size: 0.72rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--blue-light);
   margin-bottom: 10px;
-  font-family: poppins, sans-serif;
 }
+
+/*  Judul besar tiap section */
 .section-title {
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   font-weight: 600;
   color: var(--blue-deep);
   margin-bottom: 16px;
   line-height: 1.25;
-  font-family: poppins, sans-serif;
 }
 .section-title em { font-style: italic; color: var(--blue-light); }
 
+/* Garis biru pendek di bawah judul */
 .divider-blue {
   width: 48px;
   height: 3px;
   background: var(--blue-light);
   border-radius: 2px;
   margin-bottom: 28px;
-  font-family: poppins, sans-serif;
 }
 .about-img {
   width: 100%;
@@ -247,23 +238,15 @@ section { padding: 90px 0; }
   will-change: transform;
   display: block;
 }
-
 .about-img:hover,
 .about-img:focus {
   transform: scale(1.04);
   box-shadow: 0 24px 64px rgba(95, 175, 255, 0.2);
   outline: none;
-  transform: 3s;
- 
 }
+.about-img:active { transform: scale(1.02); }
 
-.about-img:active {
-  transform: scale(1.02);
-  transition: transform 2s;
-  border-color: var(--blue-deep);
-  transform: 3s;
-}
-
+/* Badge "7+ Tahun" di pojok bawah foto */
 .about-badge-box {
   background: var(--blue-deep);
   color: #fff;
@@ -272,35 +255,30 @@ section { padding: 90px 0; }
   text-align: center;
 }
 .about-badge-box .num {
-  font-family: var(--ff-display);
   font-size: 2.4rem;
   color: var(--blue-light);
   font-weight: 700;
 }
 .about-badge-box small { font-size: 0.78rem; color: rgba(255,255,255,0.65); }
 
-/* Kutipan / Blockquote */
+/* Blockquote */
 blockquote {
   border-left: 4px solid var(--blue-light);
   padding: 14px 20px;
   background: var(--blue-pale);
   border-radius: 0 6px 6px 0;
-  font-family: var(--ff-display);
   font-size: 0.9rem;
   font-style: italic;
   color: var(--blue-deep);
   margin: 28px 0;
-  font-family: poppins, sans-serif;
 }
 blockquote cite {
   display: block;
   margin-top: 8px;
   font-size: 0.78rem;
-  font-family: var(--ff-body);
   font-style: normal;
   color: var(--gray-text);
   letter-spacing: 1px;
-  font-family: poppins, sans-serif;
 }
 
 /* Warna teks variatif */
@@ -310,9 +288,8 @@ blockquote cite {
 .text-gray       { color: var(--gray-text) !important; }
 .text-white      { color: #fff !important; }
 
-/* ================================================
-   🔷 SERVICES — List
-================================================ */
+
+/* services section */
 #services { background: var(--gray-soft); }
 
 .service-card {
@@ -342,14 +319,11 @@ blockquote cite {
   margin-bottom: 20px;
 }
 .service-card h5 {
-  font-family: var(--ff-display);
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--blue-deep);
   margin-bottom: 12px;
 }
-
-/* List kustom */
 .list-check { list-style: none; padding: 0; margin: 16px 0 0; }
 .list-check li {
   padding: 5px 0 5px 28px;
@@ -366,18 +340,14 @@ blockquote cite {
   font-size: 1rem;
 }
 .list-number { padding-left: 20px; }
-.list-number li {
-  padding: 4px 0;
-  font-size: 0.88rem;
-  color: var(--gray-text);
-}
+.list-number li { padding: 4px 0; font-size: 0.88rem; color: var(--gray-text); }
 
-/* ================================================
-   🔷 TEAM
-================================================ */
+
+/* section team */
 #team { background: var(--blue-deep); }
 #team .section-title { color: #fff; }
 
+/* 📝 height:100% + flex agar semua kartu sama tinggi */
 .team-card {
   text-align: center;
   background: rgba(255,255,255,0.05);
@@ -385,7 +355,11 @@ blockquote cite {
   border-radius: 10px;
   padding: 32px 20px;
   transition: background .3s;
-  font-size: poppins, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .team-card:hover { background: rgba(255,255,255,0.10); }
 .team-card img {
@@ -395,14 +369,8 @@ blockquote cite {
   object-fit: cover;
   border: 3px solid var(--blue-light);
   margin-bottom: 16px;
-  font-size: poppins, sans-serif;
 }
-.team-card h5 {
-  font-family: poppins, sans-serif;
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 4px;
-}
+.team-card h5 { font-size: 1.1rem; color: #fff; margin-bottom: 4px; }
 .team-card span {
   font-size: 0.78rem;
   color: var(--blue-light);
@@ -410,21 +378,18 @@ blockquote cite {
   text-transform: uppercase;
 }
 
-/* ================================================
-   🔷 TABEL HARGA
-================================================ */
+
+/* tabel list harga */
 #pricing { background: var(--white); }
 
-.table-custom thead {
-  background: var(--blue-deep);
-  color: #fff;
-}
+.table-custom thead { background: var(--blue-deep); color: #fff; }
 .table-custom thead th {
   font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: .5px;
   padding: 16px 20px;
   border: none;
+  white-space: nowrap;
 }
 .table-custom tbody td {
   padding: 14px 20px;
@@ -434,25 +399,23 @@ blockquote cite {
 }
 .table-custom tbody tr:hover { background: var(--blue-pale); }
 
-/* ================================================
-   🔷 VIDEO
-================================================ */
+
+/* video */
 #showreel {
   background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
   text-align: center;
 }
 #showreel .section-title { color: #fff; }
-
 .video-frame {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 24px 64px rgba(0,0,0,0.45);
 }
-.video-frame video { width: 100%; display: block; }
+.video-frame video,
+.video-frame iframe { width: 100%; display: block; }
 
-/* ================================================
-   🔷 FORMULIR KONTAK
-================================================ */
+
+/* form */
 #contact { background: var(--gray-soft); }
 
 .contact-info-box {
@@ -464,7 +427,6 @@ blockquote cite {
 }
 .contact-info-box .section-title { color: #fff; font-size: 1.9rem; }
 .contact-info-box .section-label { color: rgba(255,255,255,0.55); }
-
 .contact-detail {
   display: flex;
   align-items: flex-start;
@@ -486,7 +448,6 @@ blockquote cite {
 .contact-detail p { margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.75); }
 .contact-detail a { color: rgba(255,255,255,0.75); text-decoration: none; }
 .contact-detail a:hover { color: #fff; }
-
 .form-box {
   background: var(--white);
   border-radius: 10px;
@@ -501,16 +462,14 @@ blockquote cite {
   color: var(--blue-deep);
   margin-bottom: 6px;
 }
-.form-control,
-.form-select {
+.form-control, .form-select {
   border: 1.5px solid #DDE4EF;
   border-radius: 5px;
   font-size: 0.9rem;
   color: var(--dark-text);
   padding: 11px 14px;
 }
-.form-control:focus,
-.form-select:focus {
+.form-control:focus, .form-select:focus {
   border-color: var(--blue-light);
   box-shadow: 0 0 0 3px rgba(45,125,210,0.12);
 }
@@ -520,16 +479,13 @@ blockquote cite {
 }
 .form-check-label { font-size: 0.88rem; color: var(--dark-text); }
 
-/* ================================================
-   🔷 FOOTER
-================================================ */
+/* footer */
 footer {
   background: var(--blue-deep);
   color: rgba(255,255,255,0.65);
   padding: 64px 0 28px;
 }
 .footer-brand {
-  font-family: var(--ff-display);
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
@@ -556,11 +512,226 @@ footer h6 {
 .footer-divider { border-color: rgba(255,255,255,0.08); margin: 36px 0 24px; }
 .footer-bottom { font-size: 0.8rem; }
 
-/* ================================================
-   RESPONSIVE TWEAK
-================================================ */
+
+/* ================================================================
+   📱 MOBILE RESPONSIVE — max-width: 576px
+   ================================================================
+   SEMUA rule di bawah ini HANYA berlaku di layar ≤ 576px (HP).
+
+   Cara kerja: properti di sini MENIMPA properti desktop di atas.
+   Kamu HANYA perlu edit bagian ini untuk mengubah tampilan mobile.
+   Jangan ubah CSS desktop di atas kecuali memang perlu.
+================================================================ */
+@media (max-width: 576px) {
+
+  /* ----------------------------------------------------------
+     UMUM
+     📝 Kurangi padding section agar tidak terlalu lega di HP
+  ---------------------------------------------------------- */
+  section { padding: 48px 0; }
+
+
+  /* ----------------------------------------------------------
+     HERO — Teks & tombol
+  ---------------------------------------------------------- */
+
+  /* 📝 Judul hero — perkecil agar tidak memenuhi layar
+        Ubah 1.85rem untuk atur ukuran font judul mobile */
+  #hero h1 {
+    font-size: 1.85rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  /* 📝 Teks kecil "Jakarta · Est." di atas judul */
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    text-align: center;
+    display: block;
+  }
+
+  /* 📝 Paragraf deskripsi di bawah judul hero
+        Ubah 0.9rem untuk atur ukuran font deskripsi mobile */
+  #hero p.lead {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  /* 📝 Wrapper tombol hero — jadi kolom vertikal di mobile */
+  #hero .d-flex.gap-3 {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+
+  /* 📝 Tiap tombol full-width + jarak bawah ke konten berikutnya
+        Ubah margin-bottom untuk atur jarak tombol ke bawah */
+  .btn-hero-primary,
+  .btn-hero-outline {
+    width: 85%;
+    text-align: center;
+    margin-bottom: 15px; /* ← ubah angka ini untuk jarak vertikal antar tombol */
+  }
+
+  /* 📝 Kartu statistik (120+, 98%, dll) */
+  .hero-card {
+    
+    margin-top: 15px;
+    padding: 15px 15px 15px 15px;
+  }
+  /* 📝 Ubah 1.7rem untuk perbesar/perkecil angka di kartu statistik */
+  .hero-card-num { font-size: 1.7rem; }
+  .hero-card-label { font-size: 0.68rem; }
+
+
+  /* ----------------------------------------------------------
+     ABOUT — Foto, judul, paragraf
+  ---------------------------------------------------------- */
+
+  /* 📝 Tinggi foto Jakarta — kurangi agar tidak terlalu besar
+        Ubah 200px untuk atur tinggi foto di mobile */
+  .about-img {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  /* 📝 Section label & judul About → tengah di mobile
+        Ubah ke 'left' jika ingin rata kiri lagi */
+  #about .section-label,
+  #about .section-title {
+    text-align: center;
+  }
+
+  /* 📝 Garis biru pendek → tengah */
+  #about .divider-blue {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 📝 Paragraf deskripsi About → tengah di mobile
+        Ubah ke 'justify' untuk kembali rata kiri-kanan */
+  #about p.text-justify {
+    text-align: center !important;
+  }
+
+  /* 📝 Badge "7+ Tahun" di pojok foto */
+  .about-badge-box {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+  .about-badge-box .num { font-size: 1.6rem; }
+
+
+  /* ----------------------------------------------------------
+     TEAM — Ukuran kartu seragam
+  ---------------------------------------------------------- */
+
+  /* 📝 Paksa semua kartu tim sama tingginya */
+  #team .row { align-items: stretch; }
+
+  .team-card {
+    height: 100%;
+    padding: 22px 14px;
+    min-height: 190px; /* ← ubah angka ini jika ingin kartu lebih tinggi/rendah */
+  }
+
+  /* 📝 Foto tim sedikit lebih kecil di HP
+        Ubah 80px untuk atur ukuran foto */
+  .team-card img {
+    width: 80px;
+    height: 80px;
+  }
+  .team-card h5 { font-size: 0.9rem; }
+  .team-card span { font-size: 0.68rem; }
+
+
+  /* ----------------------------------------------------------
+     TABEL HARGA
+  ---------------------------------------------------------- */
+
+  /* 📝 Judul "Paket Harga" → tengah
+        Ubah ke 'left' jika ingin rata kiri */
+  #pricing .section-label,
+  #pricing .section-title {
+    text-align: center;
+  }
+  #pricing .divider-blue {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 📝 Perkecil header tabel agar semua kolom muat di layar HP
+        Ubah 0.7rem untuk perbesar/perkecil teks header */
+  .table-custom thead th {
+    font-size: 0.7rem;
+    padding: 9px 7px;
+    white-space: nowrap;
+    letter-spacing: 0;
+  }
+
+  /* 📝 Perkecil isi tabel
+        Ubah 0.73rem untuk perbesar/perkecil teks isi tabel */
+  .table-custom tbody td {
+    font-size: 0.73rem;
+    padding: 9px 7px;
+  }
+
+  /* 📝 Teks catatan di bawah tabel ("*Harga dapat disesuaikan...")
+        Ubah 0.7rem untuk perbesar/perkecil teks catatan */
+  #pricing .pricing-note {
+    font-size: 0.7rem !important;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+
+  /* ----------------------------------------------------------
+     FORMULIR KONTAK
+  ---------------------------------------------------------- */
+
+  /* 📝 Kurangi padding form di HP */
+  .form-box { padding: 22px 14px; }
+  .contact-info-box { padding: 26px 18px; margin-bottom: 18px; }
+
+  /* 📝 Radio button estimasi anggaran — atur jadi 2 kolom
+        agar "< 5jt" sejajar "5-15jt", dan "15-50jt" sejajar ">50jt"
+        Ubah grid-template-columns jika ingin 1 kolom (ganti: 1fr) */
+  .budget-radio-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr; /* 2 kolom sejajar */
+    gap: 10px;                       /* ← ubah angka untuk jarak antar radio */
+    flex-wrap: unset !important;
+  }
+
+  /* Tiap item radio — pastikan sejajar */
+  .budget-radio-wrap .form-check {
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+  }
+  .budget-radio-wrap .form-check-label {
+    font-size: 0.8rem;   /* ← ubah untuk perbesar/perkecil label radio */
+  }
+
+
+  /* ----------------------------------------------------------
+     FOOTER
+  ---------------------------------------------------------- */
+  /* 📝 Perkecil brand name di footer */
+  .footer-brand { font-size: 1.25rem; }
+  footer h6 { margin-top: 20px; }
+  footer p  { font-size: 0.82rem; }
+}
+
+
+/* ================================================================
+   📱 TABLET — 577px s/d 768px
+   📝 Aturan tambahan untuk tablet / HP besar
+================================================================ */
 @media (max-width: 768px) {
   section { padding: 60px 0; }
   .form-box { padding: 28px 20px; }
   .contact-info-box { margin-bottom: 24px; }
+  .table-responsive { -webkit-overflow-scrolling: touch; }
 }
